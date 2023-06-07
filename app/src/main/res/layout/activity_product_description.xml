@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/bg"
     android:fillViewport="true"
     tools:context=".view.ProductDescriptionActivity">
@@ -23,8 +23,8 @@
 
         <ImageView
             android:id="@+id/imgDesc"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:background="@color/white"
@@ -52,20 +52,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:padding="5dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/rounded_corners"
             android:backgroundTint="@color/white"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/codigo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:text="Código: "
                 android:textColor="@color/black"
                 android:textSize="16sp"
@@ -85,11 +85,11 @@
 
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp">
 
             <LinearLayout
-                android:layout_width="170dp"
+                android:layout_width="160dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
@@ -131,9 +131,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_corners"
                 android:backgroundTint="@color/white"
                 android:orientation="horizontal">
@@ -173,11 +172,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp">
 
             <LinearLayout
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
+                android:paddingEnd="15dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
@@ -193,7 +193,7 @@
                     android:layout_marginTop="10dp"
                     android:text="NCM: "
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="normal|bold" />
 
                 <TextView
@@ -203,7 +203,7 @@
                     android:layout_marginTop="10dp"
                     android:text="ncm"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="normal|bold" />
 
             </LinearLayout>
@@ -211,9 +211,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/rounded_corners"
                 android:backgroundTint="@color/white"
                 android:orientation="horizontal">
@@ -226,7 +225,7 @@
                     android:layout_marginTop="10dp"
                     android:text="ICMS fora SP: "
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="normal|bold" />
 
                 <TextView
@@ -236,7 +235,7 @@
                     android:layout_marginTop="10dp"
                     android:text="icms sp"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="normal|bold" />
 
                 <TextView
