@@ -51,7 +51,7 @@ class ProductsActivity : AppCompatActivity() {
 
         // Convertendo um json para String e jogando na lista de produtos para mostrar na recyclerView
         val produtosJSon = this.assets.readAssetsFile("produtos.json")
-        products = Products(produtosJSon)
+        products = products(produtosJSon)
 
         // Configurando a recyclerView para mostrar a lista de produtos
         recyclerView = binding.rvMain
@@ -73,7 +73,7 @@ class ProductsActivity : AppCompatActivity() {
         if (query != null) {
             val filteredList = mutableListOf<Products>()
             for (i in products) {
-                if (i.nome.lowercase().contains(query) || i.grupo.lowercase().contains(query)) {
+                if (i.nome.lowercase().contains(query.lowercase()) || i.grupo.lowercase().contains(query.lowercase())) {
                     filteredList.add(i)
                 }
             }
@@ -98,10 +98,11 @@ class ProductsActivity : AppCompatActivity() {
     }
 
     // Função que faz a leitura do JSon como string e retorna uma lista do tipo produto
-    private fun Products(produtosJSon: String): MutableList<Products> {
+    private fun products(produtosJSon: String): MutableList<Products> {
         val produtos = mutableListOf<Products>()
         val jsonRoot = JSONObject(produtosJSon)
         val jsonProdutos = jsonRoot.getJSONArray("produtos")
+
         for (i in 0 until jsonProdutos.length()) {
             val jsonProduto = jsonProdutos.getJSONObject(i)
 
